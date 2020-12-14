@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 *{
     box-sizing: border-box;
 }
 
 body {
-    font-family:'Roboto', sans-serif;
+    font-family:'Muli', sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -13,4 +13,40 @@ body {
     justify-content: center;
     overflow: hidden;
     height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    flex: 1;
+    height: 90vh;
+    border-radius: 50px;
+    margin: 5px;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: flex 0.3s ease-in;
+}
+
+.panel h3 {
+    position: absolute;
+    opacity: 0;
+    left: 20px;
+    bottom: 20px;
+    margin : 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
 }
